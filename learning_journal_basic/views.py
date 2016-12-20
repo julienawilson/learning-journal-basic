@@ -8,23 +8,23 @@ THIS_DIR = os.path.dirname(__file__)
 
 def list_view(request):
     """View for the blog with all of the posts listed."""
-    imported_file = open(os.path.join(THIS_DIR, 'julien-mockups', 'index.html')).read()
+    imported_file = open(os.path.join(THIS_DIR, 'static', 'index.html')).read()
     return Response(imported_file)
 
 
 def update(request):
     """View """
-    imported_file = open(os.path.join(THIS_DIR, 'julien-mockups', 'edit_article.html')).read()
+    imported_file = open(os.path.join(THIS_DIR, 'static', 'edit_article.html')).read()
     return Response(imported_file)
 
 
 def detail(request):
-    imported_file = open(os.path.join(THIS_DIR, 'julien-mockups', 'article.html')).read()
+    imported_file = open(os.path.join(THIS_DIR, 'static', 'article.html')).read()
     return Response(imported_file)
 
 
 def create(request):
-    imported_file = open(os.path.join(THIS_DIR, 'julien-mockups', 'new_article.html')).read()
+    imported_file = open(os.path.join(THIS_DIR, 'static', 'new_article.html')).read()
     return Response(imported_file)
 
 
