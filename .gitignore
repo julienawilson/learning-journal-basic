@@ -22,8 +22,12 @@ sdist/
 var/
 wheels/
 *.egg-info/
+*.egg-info
 .installed.cfg
 *.egg
+*.pyc
+*.DS_Store
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

@@ -10,7 +10,7 @@ with open(os.path.join(here, 'CHANGES.txt')) as f:
 
 requires = [
     'pyramid',
-    'pyramid_chameleon',
+    'pyramid_jinja2',
     'pyramid_debugtoolbar',
     'waitress',
     ]
@@ -19,6 +19,7 @@ tests_require = [
     'WebTest >= 1.3.1',  # py3 compat
     'pytest',  # includes virtualenv
     'pytest-cov',
+    'tox'
     ]
 
 setup(name='learning-journal-basic',
@@ -31,8 +32,8 @@ setup(name='learning-journal-basic',
           "Topic :: Internet :: WWW/HTTP",
           "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
       ],
-      author='',
-      author_email='',
+      author='Julien Wilson',
+      author_email='julienawilson@gmail.com',
       url='',
       keywords='web pyramid pylons',
       packages=find_packages(),
