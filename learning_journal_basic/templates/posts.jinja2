@@ -85,12 +85,12 @@
                 <!-- Most Recent Blog Post -->
                     {% for entry in ENTRIES %}
                     <h2>
-                        <a href="/journal/{{ENTRIES[entry]['id']}}">{{ENTRIES[entry]['title']}}</a>
+                        <a href="/journal/{{entry['id']}}">{{entry['title']}}</a>
                     </h2>
                     <p class="lead">
                         by <a href="/about_me">Julien Wilson</a>
                     </p>
-                    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ ENTRIES[entry]['date']}}</p>
+                    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ entry['date']}}</p>
                     <br/>
 
                     {% endfor %}
