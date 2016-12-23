@@ -16,11 +16,11 @@ ENTRIES = [
      "date": "December 19, 2016",
      "body": "My main accomplishment today was debugging Heroku. My initial push (and my second attempt) failed, but I was able to read the errror messages and figure out what was going on.  I moved some files around and was able to make it work.  Generally, one of the things I've learned the most about in this class is reading error messages and figuring out how to fix them. Besides that, we presented ideas today.  Despite almost nobody having any ideas 5 minutes before the meeting, there were A LOT of great ideas.  I think people are thinking big.  Would be excited to work on a number of them. Data Structures are starting to feel more natural.  The Deque wasnt too tough today.  I've heard the heap is a little more exciting.  We'll see what that brings tomorrow."},
     {"title": "Start Bootstrap",
-     "id": 10,
+     "id": '10',
      "date": "today",
      "body": "learned stuff again"},
     {"title": "post3",
-     "id": 9,
+     "id": '9',
      "date": "today",
      "body": "learned stuff again again"},
 ]
