@@ -1,7 +1,9 @@
 # from pyramid.response import Response
 from pyramid.view import view_config
-import io
+# import io
 import os
+from pyramid.httpexceptions import HTTPFound
+
 
 THIS_DIR = os.path.dirname(__file__)
 
@@ -29,37 +31,26 @@ ENTRIES = [
 @view_config(route_name="home", renderer="templates/posts.jinja2")
 def list_view(request):
     """View for the blog with all of the posts listed."""
-    # imported_file = open(os.path.join(THIS_DIR, 'static', 'index.html')).read()
-    # # return Response(imported_file)
-    # return imported_file
     return {"ENTRIES": ENTRIES}
 
 
 @view_config(route_name="edit", renderer="templates/update_post_template.jinja2")
 def update(request):
-    """View """
+    """View to edit a specific blog post."""
     the_id = request.matchdict["id"]
-    # entry = list(filter(lambda x: x["id"] == the_id, ENTRIES))[0]
     entry = [item for item in ENTRIES if item['id'] == the_id][0]
     return {"entry": entry}
 
 
 @view_config(route_name="blog", renderer="templates/detail.jinja2")
 def detail(request):
+    """View to show only a specific post with its body."""
     the_id = request.matchdict["id"]
-    # entry = list(filter(lambda x: x["id"] == the_id, ENTRIES))[0]
     entry = [item for item in ENTRIES if item['id'] == the_id][0]
-
     return {"entry": entry}
 
 
 @view_config(route_name="new", renderer="templates/new_post_template.jinja2")
 def create(request):
-    return {"ENTRIES": ENTRIES}
-
-
-# def includeme(config):
-#     config.add_view(list_view, route_name='home')
-#     config.add_view(detail, route_name='blog')
-#     config.add_view(create, route_name='new')
-#     config.add_view(update, route_name='edit')
+    """View to create a new post."""
+    return {}
